@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import javax.swing.SwingUtilities;
 
 public class Main implements Runnable {
-	int n = 2; // how many sensors do you want to deploy?
+	int n = 15; // how many sensors do you want to deploy?
     public int[][] room = new int[global.hight][global.width];
     boolean [][] roomCovered = new boolean[global.hight][global.width];
 	int roomCopy[][] = new int [global.hight][global.width];
