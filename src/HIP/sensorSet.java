@@ -50,12 +50,16 @@ public class sensorSet {
     
     public void init(){
     	set = new ArrayList<shape>();
-    	for (int i = 0; i < 1; i++) {
+    	for (int i = 0; i < 5; i++) {
         	set.add(new rectangle(200,150));
 		}
-    	for (int i = 0; i < 1; i++) {
-    		set.add(new circle(100, 20));
-		}    	
+    	for (int i = 0; i < 5; i++) {
+    		set.add(new circle(100, 100));
+		} 
+        for (int i = 0; i < 5; i++) {
+            set.add(new rectangle(175,175));
+        }
+
 //    	for (int i = 0; i < 1; i++) {
 //        	set.add(new circleWedge(15,90,0,360));
 //		}        

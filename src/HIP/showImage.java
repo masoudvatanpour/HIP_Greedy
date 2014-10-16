@@ -32,13 +32,13 @@ public class showImage {
 			}		 
     }
 
-    public void paintAll() {       		
-        JPanel p = new JPanel() {        	 
+    public void paintAll() {
+        JPanel p = new JPanel() {
         	public void paintComponent(Graphics g) {
         	   super.paintComponent(g);
         	   g.drawImage(image, 0, 0, null); 
                g.setColor(Color.BLUE);
-               for (int i = 0; i < shapes.size(); i++) {            	               	               	  
+               for (int i = 0; i < shapes.size(); i++) {
             	   g.fillOval(shapes.get(i).xcenter -1, shapes.get(i).ycenter -1, 2, 2);
             	   g.drawPolygon(shapes.get(i).poly);
 //            	   shapes.get(i).printPolygon();
