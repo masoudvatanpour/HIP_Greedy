@@ -51,13 +51,13 @@ public class sensorSet {
     public void init(){
     	set = new ArrayList<shape>();
     	for (int i = 0; i < 5; i++) {
-        	set.add(new rectangle(200,150));
+        	set.add(new rectangle(114,86));
 		}
     	for (int i = 0; i < 5; i++) {
-    		set.add(new circle(100, 100));
+    		set.add(new circle(57, 100));
 		} 
         for (int i = 0; i < 5; i++) {
-            set.add(new rectangle(175,175));
+            set.add(new rectangle(100,100));
         }
 
 //    	for (int i = 0; i < 1; i++) {
