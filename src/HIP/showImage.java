@@ -41,7 +41,7 @@ public class showImage {
                for (int i = 0; i < shapes.size(); i++) {            	               	               	  
             	   g.fillOval(shapes.get(i).xcenter -1, shapes.get(i).ycenter -1, 2, 2);
             	   g.drawPolygon(shapes.get(i).poly);
-            	   shapes.get(i).printPolygon();
+//            	   shapes.get(i).printPolygon();
                }               
            }
         	

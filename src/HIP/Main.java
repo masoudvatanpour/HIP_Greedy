@@ -54,6 +54,8 @@ public class Main implements Runnable {
 			}
     	}
 		System.out.println("Heat to cover: " + posTot);
+		System.out.println("-------------------");
+
     }
     
     public void run(){    
@@ -72,6 +74,7 @@ public class Main implements Runnable {
     	int xsave;
     	int ysave;
     	int osave;
+    	long tempTime;
     	shape selectedSensor[] = new shape[n]; 
     	
     	int totalMaxCost = 0;
@@ -81,7 +84,6 @@ public class Main implements Runnable {
         	ysave = -1;
         	osave = -1;
         	for(shape sensor : s.set){  
-    			System.out.println(sensor.name);
         		for(int orientation : sensor.getOrientations()){
         			shape temp = null;
         			temp = sensor;   	      
@@ -124,16 +126,18 @@ public class Main implements Runnable {
     					}
     	    		}
     			}
-			}
-//			print2DArray(roomCopy);	
+			}	
 			selectedSensor[i].printSpecs();
 			sI.fillShapes(selectedSensor[i].name, selectedSensor[i].xcenter, selectedSensor[i].ycenter, selectedSensor[i].poly, osave);
-//			System.out.println(osave);
-    	}
-       	System.out.println("Total: " + totalMaxCost);
-		endTime = System.nanoTime();
-		long duration = endTime - startTime;
-		System.out.println("Elapsed time: " + duration);
+			tempTime = System.nanoTime();
+			long duration = tempTime - startTime;
+			System.out.println("Time till Now: " + duration);
+			System.out.println("Accuracy till Now: " + totalMaxCost);
+			System.out.println("------------------- " + i + " sensor placed");
+    	}       
+//		endTime = System.nanoTime();
+//		long duration = endTime - startTime;
+//		System.out.println("Elapsed time: " + duration);
 		saveImage();			
 	}
     
